@@ -40,11 +40,11 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(244, 358);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 37);
@@ -74,7 +74,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 3;
-            this.label1.Text = "商品编号";
+            this.label1.Text = "商品名称";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -103,7 +103,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 6;
-            this.label4.Text = "商品进价";
+            this.label4.Text = "商品售价";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox3
@@ -121,7 +121,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 8;
-            this.label5.Text = "商品售价";
+            this.label5.Text = "商品进价";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox4
@@ -138,7 +138,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 15);
             this.label6.TabIndex = 10;
-            this.label6.Text = "商品信息";
+            this.label6.Text = "商品种类";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox5
@@ -149,11 +149,20 @@
             this.textBox5.TabIndex = 11;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(63, 348);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 15);
+            this.label7.TabIndex = 12;
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 403);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox4);
@@ -187,5 +196,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label7;
     }
 }

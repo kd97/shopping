@@ -30,18 +30,21 @@ namespace shopping
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             Sell sell = new Sell();
+
             sell.ShowDialog();
         }
 
         private void 查询商品ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProductList product = new ProductList();
+            
             product.Show();
         }
 
         private void 库存明细ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StoreList store =new StoreList();
+           
             store.Show();
         }
 
@@ -73,6 +76,7 @@ namespace shopping
         private void 销售ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SellList selllist = new SellList();
+            
             selllist.Show();
         }
     }

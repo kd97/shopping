@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace shopping
 {
     public partial class Add : Form
     {
+        private static String url = Class1.add;
         public DialogResult OK { get; internal set; }
 
         public Add()
@@ -26,11 +28,24 @@ namespace shopping
 
         private void button1_Click(object sender, EventArgs e)
         {
-                    }
+            String name = textBox1.Text;
+            String amount =textBox2.Text;
+            String price = textBox3.Text;
+            String purchasePrice = textBox4.Text;
+            String kind = textBox5.Text;
+            String postName = "name=" + name + "&amount=" + amount+ "&price=" +price+ "&purchasePrice=" +purchasePrice+ "&kind="+kind;
+            
+            JObject jo = Class1.post(url, postName);
+            string message = jo["message"].ToString();
+            string success = jo["is_success"].ToString();
+            label7.Text = message;
+            if (success == "True")
+                this.DialogResult = DialogResult.OK;
+        }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            label3.Text = "添加成功";
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

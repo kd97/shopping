@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +16,8 @@ namespace shopping
 {
     public partial class Form1 : Form
     {
+        private static String url = Class1.login;
+
         public Form1()
         {
             InitializeComponent();
@@ -34,15 +40,16 @@ namespace shopping
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
-                this.label4.Text = "用户名不能为空";
-            else if (textBox2.Text == "")
-                this.label4.Text = "密码不能为空";
-            else if (!textBox1.Text.Equals("123"))
-                this.label4.Text = "用户名不存在";
-            else if (!textBox2.Text.Equals("123"))
-                this.label4.Text = "密码错误";
-            else if(textBox2.Text == "123"&&textBox1.Text=="123")
+            String name = textBox1.Text;
+            String password = textBox2.Text;
+            String postName = "username="+name+"&password="+password;
+
+            JObject jo = Class1.post(url,postName);
+            string message = jo["message"].ToString();
+            label3.Text = message;
+            string tmp = jo["is_success"].ToString();
+            //MessageBox.Show(tmp);
+            if(tmp=="True")
                 this.DialogResult = DialogResult.OK;  
         }
     }
