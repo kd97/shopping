@@ -13,13 +13,16 @@ namespace shopping
 {
     class Class1
     {
-        public static String remove = "http://192.168.199.191:8000/client/deleteGoods/";
-        public static String login = "http://192.168.199.191:8000/client/doLogin/";
-        public static String add = "http://192.168.199.191:8000/client/addGoods/";
-        public static String change = "http://192.168.199.191:8000/client/changeGoodsInfo/";
-        public static String goStore = "http://192.168.199.191:8000/client/purchaseGoods/";
-        public static String productlist = "http://192.168.199.191:8000/client/goodsList/";
-        public static String sell = "http://192.168.199.191:8000/client/sellGoods/";
+        public static String webroot = "http://192.168.199.191:8000";
+        public static String remove = webroot + "/client/deleteGoods/";
+        public static String login = webroot + "/client/doLogin/";
+        public static String add = webroot + "/client/addGoods/";
+        public static String change = webroot + "/client/changeGoodsInfo/";
+        public static String goStore = webroot + "/client/purchaseGoods/";
+        public static String productlist = webroot + "/client/goodsList/";
+        public static String sell = webroot + "/client/sellGoods/";
+        public static String recordsPath = webroot + "/client/records/";
+
         public static JObject post(String url,String postDataStr)
         {
             
