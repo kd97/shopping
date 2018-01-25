@@ -70,14 +70,14 @@ namespace shopping
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(181, 26);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(144, 26);
             this.toolStripMenuItem2.Text = "销售商品";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // 销售ToolStripMenuItem
             // 
             this.销售ToolStripMenuItem.Name = "销售ToolStripMenuItem";
-            this.销售ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.销售ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.销售ToolStripMenuItem.Text = "销售记录";
             this.销售ToolStripMenuItem.Click += new System.EventHandler(this.销售ToolStripMenuItem_Click);
             // 
@@ -92,7 +92,7 @@ namespace shopping
             // 入库管理ToolStripMenuItem
             // 
             this.入库管理ToolStripMenuItem.Name = "入库管理ToolStripMenuItem";
-            this.入库管理ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.入库管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.入库管理ToolStripMenuItem.Text = "入库管理";
             this.入库管理ToolStripMenuItem.Click += new System.EventHandler(this.入库管理ToolStripMenuItem_Click);
             // 
