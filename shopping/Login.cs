@@ -49,8 +49,10 @@ namespace shopping
             label3.Text = message;
             string tmp = jo["is_success"].ToString();
             //MessageBox.Show(tmp);
-            if(tmp=="True")
-                this.DialogResult = DialogResult.OK;  
+            if (tmp == "True")
+                this.DialogResult = DialogResult.OK;
+            else
+                MessageBox.Show(message);
         }
     }
 }
